@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 
 #include "echo-server.h"
@@ -13,7 +14,7 @@ int main(int argc, char** argv) {
     auto port = std::stoul(argv[1]);
     echo::EchoServer server;
     std::cout << "Starting server on port " << port << std::endl;
-    server.Run(9999);
+    server.Run(port);
   } catch (std::exception& e) {
     std::cerr << "Echo server failed: " << e.what() << std::endl;
     return 1;
