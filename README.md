@@ -1,0 +1,1 @@
+![Echo Server](doc/server-scheme.png)
