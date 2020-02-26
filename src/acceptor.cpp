@@ -9,6 +9,9 @@
 #include <stdexcept>
 
 namespace echo {
+
+constexpr int Acceptor::kQueueSize;
+
 Acceptor::Acceptor(const PortType port) {
   descriptor_ = socket(AF_INET, SOCK_STREAM, 0);
   if (descriptor_ == -1) {

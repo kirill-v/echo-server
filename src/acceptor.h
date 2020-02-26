@@ -18,7 +18,7 @@ class Acceptor {
   void Close();
 
  private:
-  static constexpr auto kQueueSize = 10;
+  static constexpr int kQueueSize = 10;
   // Throws exception if socket descriptor is invalid.
   void Validate();
   Descriptor descriptor_;

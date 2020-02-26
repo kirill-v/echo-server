@@ -7,6 +7,10 @@
 #include <iostream>
 
 namespace echo {
+
+constexpr int EchoServer::kTimeout;  // in milliseconds
+constexpr int EchoServer::kMaxTaskQueueSize;
+
 EchoServer::EchoServer()
     : stop_requested_(false),
       thread_pool_(std::thread::hardware_concurrency(), kMaxTaskQueueSize) {}
